@@ -5,6 +5,7 @@ import org.keycloak.KeycloakSecurityContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -32,6 +33,12 @@ public class LibraryController {
 		return "books";
 	}
 
+	@GetMapping(value = "/books/{id}")
+	public String getBooksById(Model model, @PathVariable("id") String id) {
+		model.addAttribute("book", bookRepository.read(id));
+		return "edit-book";
+	}
+
 	@GetMapping(value = "/manager")
 	public String getManager(Model model) {
 		configCommonAttributes(model);
@@ -46,7 +53,7 @@ public class LibraryController {
 	}
 
 	private void configCommonAttributes(Model model) {
-		model.addAttribute("name", getKeycloakSecurityContext().getIdToken().getGivenName());
+		model.addAttribute("name", getKeycloakSecurityContext().getIdToken().getPreferredUsername());
 	}
 
 	private KeycloakSecurityContext getKeycloakSecurityContext() {

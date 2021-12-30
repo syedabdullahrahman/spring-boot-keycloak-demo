@@ -1,4 +1,4 @@
-package com.abdullah.keycloak.config;
+package com.abdullah.keycloak.configuration;
 
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
 import org.springframework.context.annotation.Bean;

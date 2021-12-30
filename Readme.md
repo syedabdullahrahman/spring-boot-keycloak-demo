@@ -15,6 +15,14 @@ To follow along with this tutorial, you will need:
 
 #### [_Spring Security and Keycloak to Secure a Spring Boot Application_](https://www.thomasvitale.com/spring-security-keycloak/)
 
+##### Here we're going to do:
+
+- Set up a Spring Boot application;
+- Integrate Spring Boot with Keycloak;
+- Configure Spring Security to use Keycloak as an authentication provider;
+- Implement the application logic;
+- Add access policies based on user roles to protect our application endpoints.
+
 ##### Steps:
 
 - Keycloak server installed and configured [**Google it 😋**](https://www.thomasvitale.com/introducing-keycloak-identity-access-management/)
