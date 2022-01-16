@@ -13,7 +13,8 @@ public class ApiController {
     }
 
 
-    @PreAuthorize("hasAnyRole('Member', 'Librarian')")
+    //@RolesAllowed({ "Member", "Librarian" })
+    @PreAuthorize("hasAnyAuthority('ROLE_Member','ROLE_Librarian')")
     @GetMapping("/secured")
     public String getSecuredMessage() {
         return "Server return SECURED message";

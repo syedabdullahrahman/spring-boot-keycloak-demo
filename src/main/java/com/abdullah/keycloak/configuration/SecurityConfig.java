@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.authority.mapping.SimpleAuthorityMapper;
 import org.springframework.security.core.session.SessionRegistryImpl;
@@ -15,6 +16,7 @@ import org.springframework.security.web.authentication.session.RegisterSessionAu
 import org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;
 
 @KeycloakConfiguration
+@EnableGlobalMethodSecurity(jsr250Enabled = true, prePostEnabled = true)
 public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
     @Override
     protected SessionAuthenticationStrategy sessionAuthenticationStrategy() {
@@ -45,6 +47,12 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
     The SecurityConfig class we are working on extends KeycloakWebSecurityConfigurerAdapter, which defines an HttpSessionManager bean. But this bean has already been defined somewhere else in the Keycloak Adapter library. Therefore, it triggers an error in Spring 2.1.0+.
 
     We could fix the problem by changing the value for spring.main.allow-bean-definition-overriding to true. I prefer adjusting the bean definition to be loaded conditionally only if no other bean of that type has been defined.
+     */
+
+    /*
+    Two ways to configure security
+    1. Configure using HttpSecurity
+    2. @RolesAllowed in method level
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {

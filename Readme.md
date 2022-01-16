@@ -1,3 +1,5 @@
+# Spring Boot, Thymeleaf, KeyCloak REST API example with Externalization with different Environments 
+
 
 **Prerequisites**
 
@@ -5,15 +7,10 @@ To follow along with this tutorial, you will need:
 
 - JDK 8 or JDK 11+
 - an IDE
-- Gradle 5.5.0+
+- Maven
 - Spring Boot 2.1.0+
 - Keycloak 7.0.0+
 
-#### [_Securing a Spring Boot Application with Keycloak_](https://www.thomasvitale.com/spring-boot-keycloak-security/)
-
-- An excellent article to follow. Completed all of the steps, successfully got expected output
-
-#### [_Spring Security and Keycloak to Secure a Spring Boot Application_](https://www.thomasvitale.com/spring-security-keycloak/)
 
 ##### Here we're going to do:
 
@@ -33,5 +30,13 @@ To follow along with this tutorial, you will need:
 
 
 
+
+
+
+
+References:
+1. [_Spring Security and Keycloak to Secure a Spring Boot Application_](https://www.thomasvitale.com/spring-security-keycloak/)
+2. [_Securing Spring Boot REST APIs with Keycloak_](https://medium.com/devops-dudes/securing-spring-boot-rest-apis-with-keycloak-1d760b2004e)
+3. [_Securing a Spring Boot Application with Keycloak_](https://www.thomasvitale.com/spring-boot-keycloak-security/)
 
 
