@@ -1,5 +1,4 @@
-# Spring Boot MVC, Thymeleaf, KeyCloak example with Externalization with different Environments 
-
+# Spring Boot REST API & KeyCloak 
 
 **Prerequisites**
 
@@ -38,5 +37,5 @@ References:
 1. [_Spring Security and Keycloak to Secure a Spring Boot Application_](https://www.thomasvitale.com/spring-security-keycloak/)
 2. [_Securing Spring Boot REST APIs with Keycloak_](https://medium.com/devops-dudes/securing-spring-boot-rest-apis-with-keycloak-1d760b2004e)
 3. [_Securing a Spring Boot Application with Keycloak_](https://www.thomasvitale.com/spring-boot-keycloak-security/)
-
+4. [_Securing your Spring-Boot Microservice with Keycloak and Spring Security_](https://medium.com/@ubakaugonna2/securing-your-spring-boot-microservice-with-keycloak-and-spring-security-518bd4e5a25a)
 
