@@ -1,4 +1,4 @@
-# Spring Boot, Thymeleaf, KeyCloak REST API example with Externalization with different Environments 
+# Spring Boot MVC, Thymeleaf, KeyCloak example with Externalization with different Environments 
 
 
 **Prerequisites**
